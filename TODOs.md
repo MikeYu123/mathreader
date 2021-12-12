@@ -1,1 +1,2 @@
-- [ ] create endpoint for parsing image
+- [x] setup autorestart for recognition service
+- [ ] add some tests for API
