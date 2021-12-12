@@ -13,4 +13,4 @@ def image_parser():
     return jsonify(status='ok', expression=expression)
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    app.run(debug=False, host='68.183.15.75')
