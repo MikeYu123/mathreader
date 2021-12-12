@@ -8,7 +8,7 @@ app = Flask(__name__)
 def image_parser():
     input = request.data
     hme_recognizer = HME_Recognizer()
-    hme_recognizer.load_image(image, data_type='base64')
+    hme_recognizer.load_image(input, data_type='base64')
     expression, img = hme_recognizer.recognize()
     return jsonify(status='ok', expression=expression)
 
