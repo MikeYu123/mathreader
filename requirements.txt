@@ -13,3 +13,4 @@ ply
 tensorflow==2.7.0
 tensorflow-estimator==2.2.0
 twine
+flask>=2.0
