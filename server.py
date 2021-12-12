@@ -12,5 +12,5 @@ def image_parser():
     expression, img = hme_recognizer.recognize()
     return jsonify(status='ok', expression=expression)
 
-if __name == '__main__':
+if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0')
