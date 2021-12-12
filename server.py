@@ -1,8 +1,12 @@
 import base64
 from flask import Flask, request, jsonify
 from mathreader.api import *
+import os
 
 app = Flask(__name__)
+
+port = os.environ.get('PORT')
+port = 5050 if port is None else port
 
 @app.route('/parse', methods=['POST'])
 def image_parser():
@@ -13,4 +17,4 @@ def image_parser():
     return jsonify(status='ok', expression=expression)
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5050)
+    app.run(debug=False, host='0.0.0.0', port=port)
