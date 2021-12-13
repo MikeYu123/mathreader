@@ -1,4 +1,4 @@
-# MathReader: API for handwritten mathematical expressions recognition
+<!-- # MathReader: API for handwritten mathematical expressions recognition
 
 ### Paper: [MathReader: API for handwritten mathematical expressions recognition](https://ieeexplore.ieee.org/document/9288272), published in [2020 IEEE 32nd International Conference on Tools with Artificial Intelligence (ICTAI)](https://ieeexplore.ieee.org/xpl/conhome/9288160/proceeding)
 
@@ -27,7 +27,7 @@ GitHub Project: [MathReader Training](https://github.com/carolreis/mathreader-tr
 
 ## About:
 
-- __Accepted symbols__: 
+- __Accepted symbols__:
     - {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "m", "n", "x", "y", "z", "+", "-", "*", "sqrt", "=", "neq"}
 
 - __Internal modules__:
@@ -149,4 +149,15 @@ All attributes and methods avaiable in __HME_Recognizer__ class at [api.py](api.
 - get_pure_lex_errors()
     - Get 'pure' lex errors coming from PLY (Python Lex Yacc)
 - get_pure_yacc_errors()
-    - Get 'pure' yacc errors coming from PLY (Python Lex Yacc)
+    - Get 'pure' yacc errors coming from PLY (Python Lex Yacc) -->
+# Math Calc Recognition service
+This endpoint should be avaiable for backend to use. It uses tensorflow, therefore might be hard to run on arm64 arch
+## Install deps
+`pip3 install -r requirements.txt`
+## Env variables
+Following envs can be used to configure run:
+- `PORT` - port for app to run
+## How to run
+Example docker setup:
+`docker build -t mathreader .`
+`docker run -e PORT=5000 -p 5050:5050 --restart unless-stopped -d mathreader`
